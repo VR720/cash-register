@@ -5,8 +5,165 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Register</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+
+
+
+        header {
+            text-align: center;
+            padding: 1rem 2rem;
+
+        }
+
+        .header {
+            color: #059669;
+            font-size: xx-large;
+        }
+
+        td {
+            border: 2.5px solid #059669;
+            margin: 0;
+            padding: 0.5rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            width: 60%;
+            border: solid 2.5px #059669;
+        }
+
+        .section-bill {
+            text-align: center;
+            margin: 0rem;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .section-cash {
+            text-align: center;
+            margin: 1rem;
+            font-weight: bold;
+            font-size: large;
+
+        }
+
+        .check-button {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            border: none;
+            color: white;
+            background-color: #059669;
+            cursor: pointer;
+        }
+
+.continue-btn {
+    display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            border: none;
+            color: white;
+            background-color: #059669;
+            cursor: pointer;
+}
+
+        #bill-amount {
+            display: block;
+            margin: auto;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 2px #059669 solid;
+        }
+
+        #cash-given {
+            display: block;
+            margin: auto;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 2px #059669 solid;
+        }
+
+
+        caption {
+            font-size: x-large;
+            margin: 1rem;
+        }
+
+        .error-message {
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
-   
+  
+    <header>
+        <h1 class="header">Cash Register Manager</h1>
+        <p class="header-para">Enter the bill amount and the cash given by the customer and know the minimum number of
+            notes to return </p>
+    </header>
+
+    <section class="section-bill">
+        <label for="bill-amount">Bill Amount:</label>
+        <input type="number" id="bill-amount" />
+    </section>
+
+<button class="continue-btn" >Continue</button>
+
+    <section class="section-cash">
+        <label for="cash-given">Cash given:</label>
+        <input type="number" id="cash-given" />
+    </section>
+
+
+    <button class="check-button">Calculate</button>
+
+    <p class="error-message"></p>
+
+    <table>
+        <caption>Return Change:</caption>
+
+        <tr>
+            <td>No. of notes</td>
+            <td class="notesToReturn"></td>
+            <td class="notesToReturn"></td>
+            <td class="notesToReturn"></td>
+            <td class="notesToReturn"></td>
+            <td class="notesToReturn"></td>
+            <td class="notesToReturn"></td>
+            <td class="notesToReturn"></td>
+
+        </tr>
+
+        <tr>
+            <td>Note</td>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+
+        </tr>
+
+    </table>
+
+
+
+
+    <script src="/app.js"></script>
+
 </body>
 </html>
